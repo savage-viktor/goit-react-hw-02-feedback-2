@@ -1,4 +1,5 @@
 import styles from "./Section.module.css";
+import Proptypes from "prop-types";
 
 function Section({ title, children }) {
   return (
@@ -8,5 +9,10 @@ function Section({ title, children }) {
     </div>
   );
 }
+
+Section.propTypes = {
+  title: Proptypes.string.isRequired,
+  children: Proptypes.node.isRequired,
+};
 
 export default Section;
